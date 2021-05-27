@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///C:/Users/Aryaman%20agarwal/Desktop/aa/ary.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <title>Steganography</title>
+   <link rel="stylesheet" href="./applications_files/style.css">
+
+</head>
+<body>
+   <header>
+      <div class="main">
+         <a href="https://en.wikipedia.org/wiki/Steganography">ALL ABOUT STEGANOGRAPHY</a>
+      </div>
+
+      <div class="Text">
+         <h1>
+            Hiding Image-2 in Image-1
+         </h1>
+      </div>
+
+      <div class="select1"> 
+       <form action = 'abc.php' method="POST" enctype="multipart/form-data">
+        <h1>Select Image 1</h1>
+        <input type="File" name = 'img1' accept="image/*">
+       
+       <h1>Select Image 2</h1>
+        <input type="File" name = 'img2' accept="image/*">
+      
+       
+        <br><br><br><br><br>
+         <input type="submit" name="upload" value="UPLOAD"> 
+
+         <input type="download" name="downloads" value="DOWNLOAD">
+      </form>
+      </div>
+      
+   </header>
+
+   </div>
+
+</body> 
+</html>
+
+
+<?php
+ 
+    $name = $_FILES['img1']['name'];
+    $name1 = $_FILES['img2']['name'];
+    
+    $tmp_name = $_FILES['img1']['tmp_name'];
+    $tmp_name1 = $_FILES['img2']['tmp_name1'];
+    
+    if(move_uploaded_file($tmp_name, $name))
+    {
+      echo "Images uploaded Successfully!"
+    }     
+    else
+    {
+      echo "Images not Uploaded!"
+    }
+?>
